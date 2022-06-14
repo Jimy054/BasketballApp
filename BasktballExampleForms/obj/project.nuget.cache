@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FNg8xGGjydXujPExi5rKHoU6fh/9E/i+e7hSpzCOk6bbPob36SREYYsopA+bthnyRZCepKJL/ACNTaZ6Ptv7Gg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jimmy\\source\\repos\\BasktballExampleForms\\BasktballExampleForms\\BasktballExampleForms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jimmy\\.nuget\\packages\\htmlagilitypack\\1.11.43\\htmlagilitypack.1.11.43.nupkg.sha512"
+  ],
+  "logs": []
+}
