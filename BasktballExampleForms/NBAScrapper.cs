@@ -25,10 +25,21 @@ namespace BasktballExampleForms
 
             foreach (HtmlNode nodo in nodoColecion)
             {
-                    TeamModel teamModel = new TeamModel();
-                    teamModel.Id = id;
-                    teamModel.Name = nodo.ChildNodes[0].InnerText;
-                    teams.Add(teamModel);
+                if (id < 30)
+                {
+                    bool verify = nodo.Attributes["value"].Value == "Selected" ? true : false;
+                    if (!verify)
+                    {
+                        string href = nodo.Attributes["data-param-value"].Value;
+                        TeamModel teamModel = new TeamModel();
+                        teamModel.Id = id;
+                        teamModel.Name = nodo.ChildNodes[0].InnerText;
+                        teamModel.Acronym = href;
+                        teams.Add(teamModel);
+                        id++;
+                    }
+                }
+               
                 //   / teamRival = getTeam(nodo.ChildNodes[1].InnerText.Substring(2).Trim());
                   //  gameModel.GameRival = teamRival;
                   //  gameModel.Result = nodo.ChildNodes[2].InnerText.Substring(0, 1);
@@ -42,14 +53,15 @@ namespace BasktballExampleForms
                     dataHelper.Add("Result", nodo.ChildNodes[2].InnerText.Substring(0, 1));
                     Console.WriteLine("------------------------------------");*/
                    // dataTeam.Add(gameModel);
-                    id++;
+                   
                 
             }
             return teams;
         }
 
+       
 
-       public static List<GameModel> GetGames()
+       public static List<GameModel> GetGames(string team)
         {
           //  List<Dictionary<string, string>> dataTeam = new List<Dictionary<string, string>>();
             List<GameModel> dataTeam = new List<GameModel>();
@@ -57,7 +69,7 @@ namespace BasktballExampleForms
             HtmlDocument doc = new HtmlDocument();
             HtmlNode.ElementsFlags["br"] = HtmlElementFlag.Empty;
             doc.OptionWriteEmptyNodes = true;
-            var web = HttpWebRequest.Create("https://www.espn.com/nba/team/schedule/_/name/lal/los-angeles-lakers");
+            var web = HttpWebRequest.Create("https://www.espn.com/nba/team/schedule/_/name/"+team+"/seasontype/2");
             Stream stream = web.GetResponse().GetResponseStream();
             doc.Load(stream);
             string teamRival;
@@ -76,6 +88,7 @@ namespace BasktballExampleForms
                     teamRival = getTeam(nodo.ChildNodes[1].InnerText.Substring(2).Trim());
                     gameModel.GameRival = teamRival;
                     gameModel.Result = nodo.ChildNodes[2].InnerText.Substring(0, 1);
+
                     /*
                     Dictionary<string, string> dataHelper = new Dictionary<string, string>();
                     idHelper = id.ToString();

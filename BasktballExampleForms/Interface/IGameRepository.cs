@@ -9,8 +9,8 @@ namespace BasktballExampleForms.Interface
 {
     public interface IGameRepository : IDisposable
     {
-        List<GameModel> GetAllGames();
-        List<GameModel> GetSomeGames(int quantity);
+        List<GameModel> GetAllGames(TeamModel teamModel);
+        List<GameModel> GetSomeGames(int quantity, TeamModel teamModel);
         GameModel GetGameByID(int gameID);
         int GetDateLastGame();
 

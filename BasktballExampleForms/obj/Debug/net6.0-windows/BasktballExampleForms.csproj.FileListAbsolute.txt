@@ -5,6 +5,7 @@ C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\bin\Debu
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\bin\Debug\net6.0-windows\BasktballExampleForms.pdb
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.csproj.AssemblyReference.cache
+C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.Forms.AllTeamsForms.resources
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.Form1.resources
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.csproj.GenerateResource.cache
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,4 +18,3 @@ C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debu
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.pdb
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.genruntimeconfig.cache
 C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\ref\BasktballExampleForms.dll
-C:\Users\jimmy\source\repos\BasktballExampleForms\BasktballExampleForms\obj\Debug\net6.0-windows\BasktballExampleForms.Forms.AllTeamsForms.resources

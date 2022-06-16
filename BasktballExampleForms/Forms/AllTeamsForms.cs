@@ -15,11 +15,11 @@ namespace BasktballExampleForms.Forms
     public partial class AllTeamsForms : Form
     {
         GameRepository gameRepository = new GameRepository();
-        public AllTeamsForms()
+        public AllTeamsForms(TeamModel teamModel)
         {
             InitializeComponent();
 
-            List<GameModel> dataGame = gameRepository.GetAllGames();
+           List<GameModel> dataGame = gameRepository.GetAllGames(teamModel);
             foreach (GameModel item in dataGame)
             {
                 dataGridView1.Rows.Add(item.GameRival, item.GameDate, item.Result);
