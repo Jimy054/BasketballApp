@@ -10,7 +10,7 @@ namespace BasktballExampleForms.Repository
 {
     public class GameRepository : IGameRepository
     {
-        List<GameModel> dataTeam = NBAScrapper.GetGames();      
+        List<GameModel> dataTeam = (List<GameModel>)NBAScrapper.GetGames();      
 
         public List<GameModel> GetAllGames()
         {
