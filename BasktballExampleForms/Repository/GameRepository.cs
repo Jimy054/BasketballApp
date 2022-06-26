@@ -10,10 +10,15 @@ namespace BasktballExampleForms.Repository
 {
     public class GameRepository : IGameRepository
     {
+<<<<<<< HEAD
         List<GameModel> dataTeam = (List<GameModel>)NBAScrapper.GetGames();      
+=======
+        List<GameModel> dataTeam = new List<GameModel>();      
+>>>>>>> Teams
 
-        public List<GameModel> GetAllGames()
+        public List<GameModel> GetAllGames(TeamModel teamModel)
         {
+            dataTeam = NBAScrapper.GetGames(teamModel.Acronym);
             RemoveGame(0);
             return dataTeam.OrderByDescending(g=> g.GameID).ToList();
         }
@@ -28,8 +33,9 @@ namespace BasktballExampleForms.Repository
             return dataTeam.AsEnumerable().LastOrDefault();
         }
 
-        public List<GameModel> GetSomeGames(int quantity)
+        public List<GameModel> GetSomeGames(int quantity, TeamModel teamModel)
         {
+            dataTeam = NBAScrapper.GetGames(teamModel.Acronym);
             RemoveGame(0);
             return  dataTeam.OrderByDescending(g => g.GameID).Take(quantity).ToList();
         }

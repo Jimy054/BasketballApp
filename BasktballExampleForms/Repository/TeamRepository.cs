@@ -19,8 +19,8 @@ namespace BasktballExampleForms.Repository
 
         public List<TeamModel> GetTeams()
         {
-            dataTeam.RemoveAt(0);
-            return dataTeam.Take(29).ToList();
+         //   dataTeam.RemoveAt(0);
+            return dataTeam.ToList();
         }
     }
 }
