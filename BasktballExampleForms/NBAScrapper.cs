@@ -39,22 +39,6 @@ namespace BasktballExampleForms
                         id++;
                     }
                 }
-               
-                //   / teamRival = getTeam(nodo.ChildNodes[1].InnerText.Substring(2).Trim());
-                  //  gameModel.GameRival = teamRival;
-                  //  gameModel.Result = nodo.ChildNodes[2].InnerText.Substring(0, 1);
-                    /*
-                    Dictionary<string, string> dataHelper = new Dictionary<string, string>();
-                    idHelper = id.ToString();
-                    dataHelper.Add("ID", idHelper);
-                    dataHelper.Add("Date", nodo.ChildNodes[0].InnerText);
-                    
-                    dataHelper.Add("Rival", teamRival)
-                    dataHelper.Add("Result", nodo.ChildNodes[2].InnerText.Substring(0, 1));
-                    Console.WriteLine("------------------------------------");*/
-                   // dataTeam.Add(gameModel);
-                   
-                
             }
             return teams;
         }
@@ -63,7 +47,6 @@ namespace BasktballExampleForms
 
        public static List<GameModel> GetGames(string team)
         {
-          //  List<Dictionary<string, string>> dataTeam = new List<Dictionary<string, string>>();
             List<GameModel> dataTeam = new List<GameModel>();
             WebClient client = new WebClient();
             HtmlDocument doc = new HtmlDocument();
@@ -88,16 +71,6 @@ namespace BasktballExampleForms
                     teamRival = getTeam(nodo.ChildNodes[1].InnerText.Substring(2).Trim());
                     gameModel.GameRival = teamRival;
                     gameModel.Result = nodo.ChildNodes[2].InnerText.Substring(0, 1);
-
-                    /*
-                    Dictionary<string, string> dataHelper = new Dictionary<string, string>();
-                    idHelper = id.ToString();
-                    dataHelper.Add("ID", idHelper);
-                    dataHelper.Add("Date", nodo.ChildNodes[0].InnerText);
-                    
-                    dataHelper.Add("Rival", teamRival)
-                    dataHelper.Add("Result", nodo.ChildNodes[2].InnerText.Substring(0, 1));
-                    Console.WriteLine("------------------------------------");*/
                     dataTeam.Add(gameModel);
                     id++;
                 }

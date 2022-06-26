@@ -20,6 +20,7 @@ namespace BasktballExampleForms
 
             comboBox2.ValueMember = team.Acronym;
             comboBox2.DisplayMember= team.Name;
+            dataGridView1.AllowUserToAddRows = false;
 
          //  _binding.DataSource = dataGame;
 
@@ -63,6 +64,21 @@ namespace BasktballExampleForms
                 dataGridView1.Rows.Add(item.GameRival, item.GameDate, item.Result);
             }
             this.Cursor = Cursors.Default;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
